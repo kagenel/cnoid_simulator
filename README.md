@@ -1,5 +1,5 @@
 # cnoid_simulator
-簡単な BodyRTC によるトルク制御．
+簡単な BodyRTC と BodyIoRTC によるトルク制御．
 ----------------
 BodyRTC と BodyIoRTC の cmake や choreonoid によるシミュレーションまでの一通りの動作を確認した．
 
