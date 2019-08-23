@@ -1,0 +1,151 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+angleUnit: degree
+name: SimpleArm3R
+
+links:
+  -
+    name: BASE
+    translation: [ 0, 0, 0.11]
+    # jointType: free
+    jointType: fixed
+    centerOfMass: [ 0, 0, 0 ]
+    mass: 8.0
+    inertia: [
+    0.1, 0, 0,
+    0, 0.1, 0,
+    0, 0, 0.5]
+    elements:
+      -
+        type: Shape
+        geometry:
+          type: Box
+          size: [0.45, 0.3, 0.1]
+        appearance: &BodyAppearance
+          material:
+            diffuseColor: [ 0, 0.6, 0 ]
+            specularColor: [ 0.2, 0.8, 0.2 ]
+            shininess: 0.6
+  -
+    name: R_JOINT_1
+    parent: BASE
+    translation: [ 0.0, 0, 0.1 ]
+    # rotation: [ 1, 0, 0, -90 ]
+    jointType: revolute
+    jointAxis: [ 0, 1, 0 ]
+    jointRange: [ -180, 180 ]
+    jointId: 0
+    elements:
+      -
+        type: RigidBody
+        centerOfMass: [ 0, 0, 0 ]
+        mass: 3.0
+        inertia: [
+          0.1, 0,   0,
+          0,   0.1, 0,
+          0,   0,   0.1 ]
+        elements:
+          -
+            type: Transform
+            translation: [ 0.0, 0.0, 0.0 ]
+            rotation: [ 1, 0, 0, 0 ]
+            elements:
+              -
+                type: Shape
+                geometry:
+                  type: Cylinder
+                  height: 0.1
+                  radius: 0.04
+          -
+            type: Transform
+            translation: [ 0.0, 0.0, 0.3 ]
+            rotation: [ 1, 0, 0, 90 ]
+            elements:
+              -
+                type: Shape
+                geometry:
+                  type: Cylinder
+                  height: 0.5
+                  radius: 0.04
+  -
+    name: R_JOINT_2
+    parent: R_JOINT_1
+    translation: [ 0, 0, 0.55 ]
+    # rotation: [ 1, 0, 0, -90 ]
+    jointType: revolute
+    jointAxis: [ 0, 1, 0 ]
+    jointRange: [ -180, 180 ]
+    jointId: 1
+    elements:
+      -
+        type: RigidBody
+        centerOfMass: [ 0, 0, 0 ]
+        mass: 3.0
+        inertia: [
+          0.1, 0,   0,
+          0,   0.1, 0,
+          0,   0,   0.1 ]
+        elements:
+          -
+            type: Transform
+            translation: [ 0.0, 0.0, 0.0 ]
+            rotation: [ 1, 0, 0, 0 ]
+            elements:
+              -
+                type: Shape
+                geometry:
+                  type: Cylinder
+                  height: 0.1
+                  radius: 0.04
+          -
+            type: Transform
+            translation: [ 0.0, 0.0, 0.3 ]
+            rotation: [ 1, 0, 0, 90 ]
+            elements:
+              -
+                type: Shape
+                geometry:
+                  type: Cylinder
+                  height: 0.5
+                  radius: 0.04
+  -
+    name: R_JOINT_3
+    parent: R_JOINT_2
+    translation: [ 0, 0, 0.55 ]
+    # rotation: [ 1, 0, 0, -90 ]
+    jointType: revolute
+    jointAxis: [ 0, 1, 0 ]
+    jointRange: [ -180, 180 ]
+    jointId: 2
+    elements:
+      -
+        type: RigidBody
+        centerOfMass: [ 0, 0, 0 ]
+        mass: 3.0
+        inertia: [
+          0.1, 0,   0,
+          0,   0.1, 0,
+          0,   0,   0.1 ]
+        elements:
+          -
+            type: Transform
+            translation: [ 0.0, 0.0, 0.0 ]
+            rotation: [ 1, 0, 0, 0 ]
+            elements:
+              -
+                type: Shape
+                geometry:
+                  type: Cylinder
+                  height: 0.1
+                  radius: 0.04
+          -
+            type: Transform
+            translation: [ 0.0, 0.0, 0.3 ]
+            rotation: [ 1, 0, 0, 90 ]
+            elements:
+              -
+                type: Shape
+                geometry:
+                  type: Cylinder
+                  height: 0.5
+                  radius: 0.04
